@@ -50,7 +50,7 @@ metrics or time periods.
 Finally, run `app/fund_viewer/app.R`. This is a Shiny application. In
 the `Fund statistics` tab, you can select different dimensions to view
 fund metrics under different circumstances. You can also view fund
-metadata in the `Fund metadata` tab. Search, Filtration, selection and
+metadata in the `Fund metadata` tab. Search, filtration, selection and
 export (clipboard, CSV, Excel and PDF) are supported in all tables in
 the tabs.
 

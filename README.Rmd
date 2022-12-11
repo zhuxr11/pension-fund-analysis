@@ -33,7 +33,7 @@ Next, run `script.R` to scrape funds' history data and compute metrics. The scri
 
 最后，运行`app/fund_viewer/app.R`。这是一个Shiny应用程序。在`Fund statistics`页面，你可以选择不同的维度来查看不同情境下的基金指标。你还可以在`Fund metadata`页面查看基金元数据。页面中的所有表格均支持查找、过滤、选择和导出 (剪贴板、CSV、Excel和PDF)。
 
-Finally, run `app/fund_viewer/app.R`. This is a Shiny application. In the `Fund statistics` tab, you can select different dimensions to view fund metrics under different circumstances. You can also view fund metadata in the `Fund metadata` tab. Search, Filtration, selection and export (clipboard, CSV, Excel and PDF) are supported in all tables in the tabs.
+Finally, run `app/fund_viewer/app.R`. This is a Shiny application. In the `Fund statistics` tab, you can select different dimensions to view fund metrics under different circumstances. You can also view fund metadata in the `Fund metadata` tab. Search, filtration, selection and export (clipboard, CSV, Excel and PDF) are supported in all tables in the tabs.
 
 ```{r, results='asis', echo=FALSE}
 cat("![](/", file.path("app", "fund_viewer", "screenshot.png"), "?raw=true)", sep = "")
