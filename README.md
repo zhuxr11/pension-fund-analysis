@@ -44,7 +44,7 @@ The script uses the row names of the metadata as tokens to scrape the
 history data. You can twitch the code to add or replace the computed
 metrics or time periods.
 
-最后，运行`app/fund_viewer/app.R`。这是一个Shiny应用程序。在`Fund statistics`页面，你可以选择不同的维度来查看不同情境下的基金指标。你还可以在`Fund metadata`页面查看基金元数据。页面中的所有表格均支持查找、过滤、选择和导出
+最后，运行`app/fund_viewer/app.R`。这是一个Shiny应用程序。在`Fund statistics`标签页，你可以选择不同的维度来查看不同情境下的基金指标。你还可以在`Fund metadata`标签页查看基金元数据。标签页中的所有表格均支持查找、过滤、选择和导出
 (剪贴板、CSV、Excel和PDF)。
 
 Finally, run `app/fund_viewer/app.R`. This is a Shiny application. In
