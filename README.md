@@ -58,15 +58,15 @@ the tabs.
 
 ## 声明 (Disclosure)
 
-所有基金数据从因特网上获得，计算指标仅供参考，在法律允许的范围内不构成任何投资建议。本代码库作者不保证数据和指标的准确性及合理性。本代码库所有内容仅供学习交流，禁止用于商业化用途。如中英文两版内容有出入，以英文版内容为准。使用本代码库内容的任何人均不可撤回地同意上述声明。
+本代码库的所有基金数据均从因特网上获得，计算指标仅供参考，在法律允许的范围内不构成任何投资建议。本代码库作者不保证数据和指标的准确性及合理性。本代码库所有内容仅供学习交流，禁止用于商业化用途。如中英文两版内容有出入，以英文版内容为准。使用本代码库内容的任何人均不可撤回地同意上述声明。
 
-All fund information and history data were obtained from the Internet.
-The computed metrics are for reference only. Neither data nor metrics
-constitute any form of investment suggestions under any circumstances,
-to the extent permitted by applicable law. The author of this repository
-do not guarantee the accuracy and rationality of the data and the
-metrics. All content in this repository is used solely for study and
-discussion, and no commercial use is permitted. If content differs
-between the Chinese and English versions, please refer to the English
-version for accuracy. Any who uses the content in this repository
-irrevocably agrees with the aforementioned disclosure.
+All fund information and history data in this repository were obtained
+from the Internet. The computed metrics are for reference only. Neither
+data nor metrics constitute any form of investment suggestions under any
+circumstances, to the extent permitted by applicable law. The author of
+this repository do not guarantee the accuracy and rationality of the
+data and the metrics. All content in this repository is used solely for
+study and discussion, and no commercial use is permitted. If content
+differs between the Chinese and English versions, please refer to the
+English version for accuracy. Any who uses the content in this
+repository irrevocably agrees with the aforementioned disclosure.
