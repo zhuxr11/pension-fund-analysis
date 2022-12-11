@@ -54,7 +54,7 @@ metadata in the `Fund metadata` tab. Search, filtration, selection and
 export (clipboard, CSV, Excel and PDF) are supported in all tables in
 the tabs.
 
-![](/app/fund_viewer/screenshot.png?raw=true)
+![](app/fund_viewer/screenshot.png)<!-- -->
 
 ## 声明 (Disclosure)
 
