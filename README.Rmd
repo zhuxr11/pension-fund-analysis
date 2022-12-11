@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## 简介 (Introduction)
 
-2022年11月25日，中国的个人养老金正式落地。随之而来的是可供购买的上百个养老基金的Y份额。如何量化地挑选这些基金？本文就这个问题进行了初步的探索。
+2022年11月25日，中国的个人养老金正式落地。随之而来的是可供购买的上百个养老基金的Y份额。如何量化地挑选这些基金？本代码库就这个问题进行了初步的探索。
 
 On Nov. 25th, 2022, personal pension was formally put forward in China. Following this was the Y share of hundred of pension funds. How to choose wisely from these pension funds in a quantitative way? This repository provided a preliminary exploration.
 
@@ -41,6 +41,6 @@ cat("![](/", file.path("app", "fund_viewer", "screenshot.png"), "?raw=true)", se
 
 ## 声明 (Disclosure)
 
-所有基金数据从因特网上获得，计算指标仅供参考，在法律允许的范围内不构成任何投资建议。本文作者不保证数据和指标的准确性及合理性。本文所有代码仅供学习交流，禁止用于商业化用途。如中英文两版内容有出入，以英文版内容为准。
+所有基金数据从因特网上获得，计算指标仅供参考，在法律允许的范围内不构成任何投资建议。本代码库作者不保证数据和指标的准确性及合理性。本代码库所有代码仅供学习交流，禁止用于商业化用途。如中英文两版内容有出入，以英文版内容为准。使用本代码库内容的任何人均不可撤回地同意上述声明。
 
-All fund information and history data were obtained from the Internet. The computed metrics are for reference only. Neither data nor metrics constitute any form of investment suggestions under any circumstances, to the extent permitted by applicable law. All code in this repository is used solely for study and discussion, and no commercial use is permitted. If content differs between the Chinese and English versions, please refer to the English version for accuracy.
+All fund information and history data were obtained from the Internet. The computed metrics are for reference only. Neither data nor metrics constitute any form of investment suggestions under any circumstances, to the extent permitted by applicable law. The author of this repository do not guarantee the accuracy and rationality of the data and the metrics. All code in this repository is used solely for study and discussion, and no commercial use is permitted. If content differs between the Chinese and English versions, please refer to the English version for accuracy. All who use this repository irrevocably agree with the aforementioned disclosure.
