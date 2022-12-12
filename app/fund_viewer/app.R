@@ -10,8 +10,8 @@
 library(shiny)
 library(DT)
 
-fund_metadata <- readRDS("../../fund_metadata.rds")
-fund_res <- readRDS("../../fund_res.rds")
+fund_metadata <- readRDS("fund_metadata.rds")
+fund_res <- readRDS("fund_res.rds")
 
 select_all_label <- "_ALL"
 stopifnot(all(purrr::map_lgl(dimnames(fund_res), ~ select_all_label %in% .x == FALSE)))
