@@ -37,7 +37,21 @@ ui <- fluidPage(
   titlePanel("Fund viewer"),
   
   # Enable Font Awesome icons
-  tags$script(src = "https://kit.fontawesome.com/6ecbd6c532.js"),
+  includeScript("https://kit.fontawesome.com/6ecbd6c532.js"),
+  
+  # Create prompt to view disclosure
+  tags$script(
+    HTML(paste(
+      paste(
+        "var disclosure_opt = confirm('Welcome to Fund viewer! By continuing, you show your consent with the application\\'s disclosure on risk and liability.",
+        "",
+        "Would you like to view the disclosure?');",
+        sep = "\\n"
+      ),
+      "if (disclosure_opt == true) {window.open('https://github.com/zhuxr11/pension-fund-analysis#披露事项-disclosure', '_blank');}",
+      sep = "\n"
+    ))
+  ),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
@@ -84,11 +98,11 @@ ui <- fluidPage(
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
-  
+
   output$padding1 <- renderText("<br/>")
   output$padding2 <- renderText("<br/>")
   output$update_on <- renderText("Last updated on: <b> 2022-12-03 </b> <br/> <br/>")
-  output$git_repo <- renderText("<a href= https://github.com/zhuxr11/pension-fund-analysis> <i class=\"fab fa-github\"> </i> Visit Github repository </a>")
+  output$git_repo <- renderText("<a href= \"https://github.com/zhuxr11/pension-fund-analysis\" target = \"_blank\"> <i class=\"fab fa-github\"> </i> Visit Github repository </a>")
   
   output$fundMetadata <- DT::renderDT(
     DT::datatable(
