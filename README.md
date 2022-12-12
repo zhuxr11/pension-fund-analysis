@@ -1,7 +1,7 @@
 基金查看器 (Fund viewer)
 ================
 
-- <a href="#声明-disclosure" id="toc-声明-disclosure">声明
+- <a href="#披露事项-disclosure" id="toc-披露事项-disclosure">披露事项
   (Disclosure)</a>
 - <a href="#简介-introduction" id="toc-简介-introduction">简介
   (Introduction)</a>
@@ -14,9 +14,9 @@
     id="toc-定制基金数据和指标-customizing-fund-data-and-metrics">定制基金数据和指标
     (Customizing fund data and metrics)</a>
 
-## 声明 (Disclosure)
+## 披露事项 (Disclosure)
 
-本代码库的所有基金数据均从因特网上获得，计算指标仅供参考，在法律允许的范围内不构成任何投资建议。本代码库作者不保证数据、指标和代码的准确性及合理性，也不应当被要求对使用本代码库而导致的任何损失负责。本代码库所有内容仅供学习交流，禁止任何商业化用途。如中英文两版内容有出入，请以英文版内容为准。使用本代码库的任何人均不可撤回地同意上述声明。
+本代码库的所有基金数据均从因特网上获得，计算指标仅供参考，在法律允许的范围内不构成任何投资建议。本代码库的作者不保证数据、指标和代码的准确性及合理性，也不应当被要求对使用本代码库而导致的任何损失负责。本代码库的所有内容仅供学习交流，禁止任何商业化用途。如中英文两版内容有出入，请以英文版内容为准。**使用本代码库的任何人均在此声明：不可撤回地同意上述披露事项。**
 
 All fund information and history data in this repository were obtained
 from the Internet. The computed metrics are for reference only. Neither
@@ -27,15 +27,16 @@ of the data, the metrics and the code, and should not be held liable for
 any loss due to the use of this repository. All content in this
 repository is used solely for study and discussion, and no commercial
 use is permitted. If content differs between the Chinese and English
-versions, please refer to the English version for accuracy. Any who uses
-this repository irrevocably agrees with the aforementioned disclosure.
+versions, please refer to the English version for accuracy. **Anyone who
+uses this repository claims herein: irrevocably agree with the
+aforementioned disclosure.**
 
 ## 简介 (Introduction)
 
 2022年11月25日，中国部分城市的个人养老金正式落地。随之而来的是可供购买的上百个养老基金的Y份额。如何量化地挑选这些基金？本代码库就这个问题进行了初步的探索。
 
 On Nov. 25th, 2022, personal pension was formally put forward in part of
-the cities in China. Following this was the Y share of hundred of
+the cities in China. Following this was the Y share of about a hundred
 pension funds. How to choose wisely from these pension funds in a
 quantitative way? This repository provided a preliminary exploration.
 
