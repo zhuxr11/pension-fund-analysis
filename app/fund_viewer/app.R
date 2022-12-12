@@ -85,7 +85,7 @@ server <- function(input, output) {
   output$fundMetadata <- DT::renderDT(
     DT::datatable(
       fund_metadata %>%
-        tibble::rownames_to_column(paste0("_", dplyr::first(names(dimnames(fund_res))))),
+        tibble::rownames_to_column("_FUND"),
       options = list(
         dom = "lBfrtip",
         buttons = c('copy', 'csv', 'excel', 'pdf', 'selectNone'),
