@@ -83,9 +83,13 @@ If customizing fund data and metrics, please read the following.
 
 ### 定制基金数据和指标 (Customizing fund data and metrics)
 
-系统要求：R (>= 4.0.0), RStudio
+以下内容需要使用R语言编程，请确认自己具备相应的知识和技能。
 
-Requirements: R (>= 4.0.0), RStudio
+The following requires programming in R language. Please ensure your knowledge and competence.
+
+软件要求：[R](https://cloud.r-project.org/) (>= 4.0.0), [RStudio](https://rstudio.com/products/rstudio/download/)
+
+Software requirements: [R](https://cloud.r-project.org/) (>= 4.0.0), [RStudio](https://rstudio.com/products/rstudio/download/)
 
 首先，在RStudio中打开工程文件，运行`install.packages("renv")`在RStudio中安装`renv`软件包，并运行`renv::activate()` 和`renv::restore()`以确保下载并安装正确版本的软件包。
 
@@ -93,7 +97,7 @@ First, open project file in RStudio. Run `install.packages("renv")` to install `
 
 接着，在`lookup`文件夹中放入待处理的基金信息，例如从网页上复制的文本 (示例： `lookup/pension_funds_20221203.txt`)，并运行`metadata.R`生成`data.frame`作为基因元数据，其行名 (必需) 为抓取历史数据用的基金代号。你可能需要调整代码以适应不同的输入格式。
 
-Then, put into the `lookup` folder the fund information (e.g. text copied from websites). Check for example: `lookup/pension_funds_20221203.txt`. Run `metadata.R` to generate a `data.frame` as fund metadata with row names (required) to get fund history data. You may need to twitch the code to fit different input formats.
+Then, put into the `lookup` folder the fund information (e.g. text copied from websites). Check for example: `lookup/pension_funds_20221203.txt`. Run `metadata.R` to generate a `data.frame` as fund metadata with row names (required) as symbols to scrape funds' history data. You may need to twitch the code to fit different input formats.
 
 然后，运行`script.R`抓取基金历史数据和计算指标。该脚本使用基金元数据的行名作为代号进行历史数据的抓取。通常情况下，Y份额成立时间较其它份额更短，因此需要查询每个基金中历史最长份额的数据以得到更准确的统计结果。在这个情况下，需要以转换份额后的代号作为行名。你可以调整代码以更改代号的对应关系，以及增加或替换需要计算的基金指标和时间段。
 
