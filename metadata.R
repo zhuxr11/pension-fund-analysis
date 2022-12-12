@@ -10,7 +10,7 @@ all_fund_metadata <- readLines("http://fund.eastmoney.com/js/fundcode_search.js"
   stringr::str_extract("\\[{2}.*\\]{2}") %>%
   jsonlite::parse_json() %>%
   # Set column names
-  purrr::map(purrr::set_names, c("Token", "Abbrev.", "Name", "Type", "English name")) %>%
+  purrr::map(purrr::set_names, c("Symbol", "Abbrev.", "Name", "Type", "English name")) %>%
   dplyr::bind_rows()
 
 # Load input file of pension funds (this may vary according to input formats)
@@ -34,15 +34,15 @@ fund_metadata <- split(
 ) %>%
   purrr::map(paste, collapse = "") %>%
   unglue::unglue_data(
-    patterns = c("{Name}产品代码：{Token}产品类型：{Type}产品状态：{Status}",
-                 "{Name}产品代码：{Token}产品状态：{Status}")
+    patterns = c("{Name}产品代码：{Symbol}产品类型：{Type}产品状态：{Status}",
+                 "{Name}产品代码：{Symbol}产品状态：{Status}")
   ) %>%
   # Match each fund to its first established share
   dplyr::rowwise() %>%
   dplyr::mutate(
     ref_idx = {
       ref_name <- all_fund_metadata %>%
-        dplyr::filter(Token %in% .env[["Token"]] == TRUE) %>%
+        dplyr::filter(Symbol %in% .env[["Symbol"]] == TRUE) %>%
         dplyr::pull("Name")
       stopifnot(length(ref_name) == 1L)
       list(
@@ -50,7 +50,7 @@ fund_metadata <- split(
                 .fund_names_for_match(ref_name) == TRUE)
       )
     },
-    token_ref = all_fund_metadata[["Token"]][dplyr::first(ref_idx)]
+    token_ref = all_fund_metadata[["Symbol"]][dplyr::first(ref_idx)]
   ) %>%
   dplyr::ungroup() %>%
   dplyr::select(-ref_idx) %>%
