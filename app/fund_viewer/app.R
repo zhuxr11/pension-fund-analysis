@@ -144,38 +144,41 @@ server <- function(input, output) {
         error = function(err) {
           if (stringr::str_starts(conditionMessage(err),
                                   "Too many dimensions that cannot be dropped") == TRUE) {
-            stop("Please select non-\"", select_all_label, "\" on at least ", length(dim(fund_res)) - 2L, " ",
-                 if (length(dim(fund_res)) - 2L == 1L) "dimension" else "dimensions", "!")
+            fund_res
           }
         }
       )
       
-      DT::datatable(
-        fund_res_subset %>%
-          round(digits = 4L) %>%
-          as.data.frame() %>%
-          # Move row names to a column to enable filtration on row names
-          tibble::rownames_to_column(
-            { 
-              col_name <- names(dimnames(fund_res_subset))[1L]
-              if (is.null(col_name) == TRUE | nchar(col_name) == 0L) {
-                " "
-              } else {
-                col_name
+      if (length(dim(fund_res_subset)) <= 2L) {
+        DT::datatable(
+          fund_res_subset %>%
+            round(digits = 4L) %>%
+            as.data.frame() %>%
+            # Move row names to a column to enable filtration on row names
+            tibble::rownames_to_column(
+              { 
+                col_name <- names(dimnames(fund_res_subset))[1L]
+                if (is.null(col_name) == TRUE | nchar(col_name) == 0L) {
+                  " "
+                } else {
+                  col_name
+                }
               }
-            }
+            ),
+          options = list(
+            dom = "lBfrtip",
+            buttons = c('copy', 'csv', 'excel', 'pdf', 'selectNone'),
+            pageLength = 25L,
+            select = list(style = "multi+shift", item = "row")
           ),
-        options = list(
-          dom = "lBfrtip",
-          buttons = c('copy', 'csv', 'excel', 'pdf', 'selectNone'),
-          pageLength = 25L,
-          select = list(style = "multi+shift", item = "row")
-        ),
-        rownames = FALSE,
-        filter = "top",
-        selection = "none",
-        extension = c("Buttons", "Select")
-      )
+          rownames = FALSE,
+          filter = "top",
+          selection = "none",
+          extension = c("Buttons", "Select")
+        )
+      } else {
+        NULL
+      }
     },
     server = FALSE)
 }
