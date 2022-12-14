@@ -44,24 +44,26 @@ quantitative way? This repository provided a preliminary exploration.
 
 ### Fund viewer应用程序 (Fund viewer application)
 
-如果只需要查看基金指标和元数据，请访问[此链接](https://zxr6.shinyapps.io/fund_viewer/)。应用程序页面大约需要15-30秒完成加载，请耐心等待。此应用程序内的数据会不定期更新。应用程序的使用方法和示例如下：
+如果只需要查看基金指标和元数据，请访问[此链接](https://zxr6.shinyapps.io/fund_viewer/)。通常情况下，应用程序页面至多需要30秒完成加载，请耐心等待。此应用程序内的数据会不定期更新。应用程序的使用方法和示例如下：
 
 If only viewing fund metrics and metadata, please visit [this
-site](https://zxr6.shinyapps.io/fund_viewer/). The application page may
-completely load in 15-30 seconds, so please be patient. The data in the
-application will update from time to time. The instructions and examples
-are as follows:
+site](https://zxr6.shinyapps.io/fund_viewer/). Usually, the application
+page may take up to 30 seconds to completely load, so please be patient.
+The data in the application will update from time to time. The
+instructions and examples are as follows:
 
 应用程序分为左右两个面板：左侧面板包含若干选择框，用于选择维度视角
-(基金、时间段和指标)； 右侧面板包含若干标签页，用于查看数据表格
+(基金-Fund、时间段-Period和指标-Metric，选项 `_ALL`表示全选)；
+右侧面板包含若干标签页，用于查看数据表格
 (详见下方描述)。标签页中的所有表格均支持查找、过滤、选择和导出
-(剪贴板、CSV、Excel和PDF)。
+(剪贴板-Copy、CSV、Excel和PDF)。
 
 The application consists of two panels: the one on the left with select
-boxes to choose dimension view ports (funds, periods and metrics), while
-the one on the right with tabs to view data tables (check below for
-details). Search, filtration, selection and export (clipboard, CSV,
-Excel and PDF) are supported in all tables in the tabs.
+boxes to choose dimension view ports (funds, periods and metrics, where
+the choice `_ALL` stands for “select all”), while the one on the right
+with tabs to view data tables (check below for details). Search,
+filtration, selection and export (clipboard, CSV, Excel and PDF) are
+supported in all tables in the tabs.
 
 - `Fund statistics`标签页:
   你可以选择不同的维度来查看不同情境下的基金指标 (示例1-3)。
